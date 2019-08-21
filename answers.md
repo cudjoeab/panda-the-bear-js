@@ -1,3 +1,4 @@
+<!-- PART ONE  -->
 <!-- 1.Use the same approach to select the element that contains the photo of the sky and change the src attribute to another picture URL of your choosing. -->
 let profileImage = document.querySelector('.profile-image'); 
 undefined
@@ -101,3 +102,50 @@ $$(".bio-info-value")[1].remove();
 undefined
 
 <!-- NB: jQuery selectors $() : returns a single object $$() : returns a collection of objects   -->
+
+<!-- PART TWO -->
+<!-- 1. Panda the Bear is lying about their skills! Take the "time travel" skill off the page to satisfy your personal sense of justice. -->
+$("#time-travel").remove()
+
+<!-- 2. cloning pikachu -->
+let pikaPic = document.querySelector ('#right-image > img')
+let clone = pikaPic.cloneNode(true);
+let section = document.querySelector('.portfolio-container');
+section.appendChild(clone);
+
+<!-- 3. cloning pikachu many times -->
+
+for (pika = 0; pika < 10; pika ++) {
+    let newPikaClone = document.createElement('img');
+    newPikaClone.src = 'images/pikachu-drawing.jpg';
+    section.appendChild(newPikaClone); 
+}
+
+<!-- 4. adding update with time -->
+const listItem = document.createElement('li');
+>>undefined
+const leftSpan = document.createElement('span');
+>>undefined
+var lastUpdated = document.createTextNode('Page last update on');
+>>undefined
+leftSpan.appendChild(lastUpdated);
+>>"Page last update on"
+listItem.appendChild(leftSpan);
+>><span>​Page last update on​</span>​
+const rightSpan = document.createElement('span');
+>> undefined
+let dateUpdate = new Date()
+let date = document.createTextNode(dateUpdate);
+undefined
+date 
+>>"Tue Aug 20 2019 21:04:27 GMT-0400 (Eastern Daylight Time)"
+rightSpan.appendChild(date);
+>>"Tue Aug 20 2019 21:04:27 GMT-0400 (Eastern Daylight Time)"
+
+listItem.appendChild(rightSpan);
+let bioInfo = document.querySelector('.bio-info');
+>> undefined
+bioInfo.appendChild(listItem);
+>> <li>​…​</li>​
+
+
